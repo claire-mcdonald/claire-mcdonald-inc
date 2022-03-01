@@ -1,0 +1,202 @@
+body {
+    margin: 0 auto;
+    font-family: sans-serif; 
+    /* change font */
+}
+
+header {
+    background: url('../img/header-bg-sm.webp') center / cover no-repeat;
+    height: 60vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+h1 {
+    font-size: calc(1.2rem + 1vw);
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover,
+a:active {
+    cursor: pointer;
+}
+
+.toggle-btn:hover,
+.toggle-btn:active {
+    cursor: pointer;
+}  
+
+.toggle-btn {
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+span {
+    display: block;
+    width: 2rem;
+    height: 0.2rem;
+    margin: 0.3rem;
+    background: black;
+}
+
+header nav {
+    background:white;
+    width: 30vw;
+    height: 20vh;
+    position: absolute;
+    left: -100%;
+    transition: all 0.7s ease-in-out;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1rem;
+}
+
+.show-nav {
+    left: 0;
+    max-height: 20vh;
+    overflow: visible;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+header p {
+    background-color: white;
+    opacity: 0.50;
+    border-radius: 5px;
+    width: auto;
+    padding: 2rem;
+    margin: 3rem;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+	padding: 5vh;
+	display: flex;
+	flex-flow: column;
+    color: white
+}
+
+section {
+    border-radius: 5px;
+	height: 30vh;
+	padding: 2rem;
+	text-align: center;
+    background-color: #334839;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: calc(1.5rem + 1vh);
+}
+
+footer {
+    background-color: #eeeeee;
+}
+
+footer > nav ul {
+    display: flex;
+    justify-content: center;
+    padding: unset;
+}
+
+footer p {
+    padding: 2rem;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 750px) {
+    span {
+		left: -200%;
+        position: absolute;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav {
+		overflow: unset;
+		width: unset;
+		height: unset;
+		max-height: unset;
+		left: 0;
+		position: unset;
+		transition: unset;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+    
+    nav ul li {
+        padding: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    nav ul li a {
+        padding: unset;
+        margin-left: 1rem;
+    }
+
+    header nav ul li a:hover, 
+    header nav ul li a:active {
+    background-color: #eeeeee;
+    padding: 0.5rem;
+    transition: 0.3s ease-in-out;
+    border-radius: 0.4rem;
+    }
+
+    header {
+        background: url('../img/header-bg-md.webp') center / cover no-repeat;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    main {
+		flex-flow: row;
+		justify-content: space-between;
+        gap: 2rem;
+	}
+
+	section {
+		width: calc(33% - 2rem);
+	}
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        background: url('../img/header-bg-lg.webp') center / cover no-repeat;
+    }
+    
+    main {
+		max-width: 1200px;
+		margin: auto;
+	}
+}
